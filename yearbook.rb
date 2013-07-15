@@ -1,12 +1,13 @@
+require 'open-uri'
 require 'json'
 
 course_url = "http://portal.starterleague.com/courses/43.json"
 
-result = open (course_url).read
+result = open(course_url).read
 
 data = JSON.parse(result)
 
-students = data["student"]
+students = data["students"]
 
 puts "<!DOCTYPE html>"
 puts "<html>"
